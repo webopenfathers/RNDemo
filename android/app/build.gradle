@@ -92,6 +92,12 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+            storeFile file('C:\\Users\\12904\\Desktop\\sign.jks')
+            storePassword '123456'
+            keyAlias 'demo'
+            keyPassword '123456'
+        }
     }
     buildTypes {
         debug {

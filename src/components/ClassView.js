@@ -14,7 +14,7 @@ class ClassView extends React.Component {
     // 组件挂载后，设置state
     setTimeout(() => {
       this.setState({
-        address: '浙江省杭州时',
+        address: '浙江省杭州市',
       });
     }, 3000);
   }

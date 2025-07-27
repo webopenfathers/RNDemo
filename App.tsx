@@ -5,10 +5,8 @@
  * @format
  */
 
-import { NewAppScreen } from '@react-native/new-app-screen';
 import {
   StatusBar,
-  Text,
   StyleSheet,
   useColorScheme,
   View,
@@ -19,28 +17,20 @@ function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
-    <SafeAreaView style={styles.areaView}>
-      <View style={styles.container}>
-        <Text style={styles.text}>Hello ZBW</Text>
-        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-        <NewAppScreen templateFileName="App.tsx" />
-      </View>
+    <SafeAreaView>
+      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <View style={styles.container} />
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  areaView: {
-    flex: 1,
-  },
   container: {
-    flex: 1,
-  },
-  text: {
-    textAlign: 'center',
-    color: 'red',
+    height: '100%',
+    width: '100%',
     alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: 'column',
+    backgroundColor: '#fff',
   },
 });
 

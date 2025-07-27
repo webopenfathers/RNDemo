@@ -111,6 +111,21 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
+
+    //    flavorDimensions "type"
+    //    productFlavors {
+    //        // 供RN层调用
+    //        dev {
+    //            resValue("string","app_name","测试包")
+    //        }
+    //
+    //        prod {
+    //            resValue("string","app_name","生产包")
+    //        }
+    //    }
+    // 原生层script脚本中添加如何代码
+    // "android_devDebug": "cd android && gradlew.bat installDevDebug",
+    // "android_prodDebug": "cd android && gradlew.bat installProdDebug",
 }
 
 dependencies {

@@ -12,21 +12,27 @@ import {
   StyleSheet,
   useColorScheme,
   View,
+  SafeAreaView,
 } from 'react-native';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Hello ZBW</Text>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
-    </View>
+    <SafeAreaView style={styles.areaView}>
+      <View style={styles.container}>
+        <Text style={styles.text}>Hello ZBW</Text>
+        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+        <NewAppScreen templateFileName="App.tsx" />
+      </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  areaView: {
+    flex: 1,
+  },
   container: {
     flex: 1,
   },

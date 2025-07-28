@@ -13,13 +13,14 @@ import {
   SafeAreaView,
 } from 'react-native';
 
+// import ViewDemo from './src/components/ViewDemo';
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
     <SafeAreaView>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <View style={styles.container} />
+      <View style={styles.container}>{/* <ViewDemo /> */}</View>
     </SafeAreaView>
   );
 }

@@ -15,6 +15,7 @@ import {
 
 // import ViewDemo from './src/components/ViewDemo';
 // import TextDemo from './src/components/TextDemo';
+import ImageDemo from './src/components/ImageDemo';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -25,6 +26,7 @@ function App() {
       <View style={styles.container}>
         {/* <ViewDemo /> */}
         {/* <TextDemo /> */}
+        <ImageDemo />
       </View>
     </SafeAreaView>
   );

@@ -18,7 +18,8 @@ import {
 // import ImageDemo from './src/components/ImageDemo';
 // import ImageBackgroundDemo from './src/components/ImageBackgroundDemo';
 // import TextInputDemo from './src/components/TextInputDemo';
-import TouchableOpacityDemo from './src/components/TouchableOpacityDemo';
+// import TouchableOpacityDemo from './src/components/TouchableOpacityDemo';
+import TouchableHighlightDemo from './src/components/TouchableHighlightDemo';
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -31,7 +32,8 @@ function App() {
         {/* <ImageDemo /> */}
         {/* <ImageBackgroundDemo /> */}
         {/* <TextInputDemo /> */}
-        <TouchableOpacityDemo />
+        {/* <TouchableOpacityDemo /> */}
+        <TouchableHighlightDemo />
       </View>
     </SafeAreaView>
   );

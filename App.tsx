@@ -16,8 +16,8 @@ import {
 // import ViewDemo from './src/components/ViewDemo';
 // import TextDemo from './src/components/TextDemo';
 // import ImageDemo from './src/components/ImageDemo';
-import ImageBackgroundDemo from './src/components/ImageBackgroundDemo';
-
+// import ImageBackgroundDemo from './src/components/ImageBackgroundDemo';
+import TextInputDemo from './src/components/TextInputDemo';
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -28,7 +28,8 @@ function App() {
         {/* <ViewDemo /> */}
         {/* <TextDemo /> */}
         {/* <ImageDemo /> */}
-        <ImageBackgroundDemo />
+        {/* <ImageBackgroundDemo /> */}
+        <TextInputDemo />
       </View>
     </SafeAreaView>
   );

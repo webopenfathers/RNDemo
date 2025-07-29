@@ -1,4 +1,5 @@
 {
   "name": "RNDemo",
-  "displayName": "RNDemo"
+  "displayName": "RNDemo",
+  "specialChar": "*"
 }

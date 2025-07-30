@@ -1,6 +1,12 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
-import { View, StyleSheet, Text, SectionList } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Text,
+  SectionList,
+  RefreshControl,
+} from 'react-native';
 import { SectionData } from '../constants/Data';
 
 // SectionList 多类型分组列表
@@ -36,8 +42,20 @@ import { SectionData } from '../constants/Data';
 //   itemIndex: 0, // 此分组中元素索引(注意：索引为0的起始元素是sectionHeader)
 // })
 
+// 九：RefreshControl 下拉刷新
+// 1、下拉刷新(这两个属性是 RefreshControl 组件的属性)
+// refreshing：当前是否正在刷新
+// onRefresh: 下拉刷新时触发(请求第一页数据)
+
+// 2.上拉加载更多(这两个属性是  SectionList FlatList 组件的属性)
+// onEndReached: 触底时触发(请求下一页数据)
+// onEndReachedThreshold: 触底时触发的阈值(默认0.5)
+// 例：onEndReachedThresholf={0.2} 表示距离页面底部，还剩整个屏幕的 1/5 时触发onEndReached
+
 const SectionListDemo = () => {
   const sectionListRef = useRef(null);
+
+  const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -77,7 +95,8 @@ const SectionListDemo = () => {
       sections={SectionData}
       renderItem={renderItem}
       ListFooterComponent={ListFooter}
-      ListHeaderComponent={ListHeader}
+      ListHeaderComponen
+      t={ListHeader}
       renderSectionHeader={renderSectionHeader}
       keyExtractor={(item, index) => `${item}-${index}`}
       contentContainerStyle={styles.containerStyle}
@@ -89,6 +108,26 @@ const SectionListDemo = () => {
       keyboardShouldPersistTaps="handled"
       ItemSeparatorComponent={separatorComponent}
       stickySectionHeadersEnabled={true}
+      refreshControl={
+        <RefreshControl
+          refreshing={refreshing}
+          onRefresh={() => {
+            console.log('onRefresh...');
+            setRefreshing(true);
+            // do request new data
+            setTimeout(() => {
+              setRefreshing(false);
+            }, 5000);
+          }}
+        />
+      }
+      onEndReached={() => {
+        console.log('onEndReached...');
+        // do request next page data
+      }}
+      // 0-1之间
+      // 0.2 表示距离页面底部，还剩整个屏幕的 1/5 时触发onEndReached
+      onEndReachedThresholf={0.2}
     />
   );
 };

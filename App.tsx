@@ -22,7 +22,8 @@ import {
 // import TouchableHighlightDemo from './src/components/TouchableHighlightDemo';
 // import TouchableWithoutFeedbackDemo from './src/components/TouchableWithoutFeedbackDemo';
 // import ButtonDemo from './src/components/ButtonDemo';
-import PressableDemo from './src/components/PressableDemo';
+// import PressableDemo from './src/components/PressableDemo';
+import ScrollViewDemo from './src/components/ScrollViewDemo';
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -39,7 +40,8 @@ function App() {
         {/* <TouchableHighlightDemo /> */}
         {/* <TouchableWithoutFeedbackDemo /> */}
         {/* <ButtonDemo /> */}
-        <PressableDemo />
+        {/* <PressableDemo /> */}
+        <ScrollViewDemo />
       </View>
     </SafeAreaView>
   );

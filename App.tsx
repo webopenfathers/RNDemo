@@ -25,8 +25,10 @@ import {
 // import PressableDemo from './src/components/PressableDemo';
 // import ScrollViewDemo from './src/components/ScrollViewDemo';
 // import FlatListDemo from './src/components/FlatListDemo';
+// import SectionListDemo from './src/components/SectionListDemo';
 
-import SectionListDemo from './src/components/SectionListDemo';
+import ModalDemo from './src/components/ModalDemo';
+
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -46,7 +48,8 @@ function App() {
         {/* <PressableDemo /> */}
         {/* <ScrollViewDemo /> */}
         {/* <FlatListDemo /> */}
-        <SectionListDemo />
+        {/* <SectionListDemo /> */}
+        <ModalDemo />
       </View>
     </SafeAreaView>
   );

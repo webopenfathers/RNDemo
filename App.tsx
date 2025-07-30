@@ -23,7 +23,8 @@ import {
 // import TouchableWithoutFeedbackDemo from './src/components/TouchableWithoutFeedbackDemo';
 // import ButtonDemo from './src/components/ButtonDemo';
 // import PressableDemo from './src/components/PressableDemo';
-import ScrollViewDemo from './src/components/ScrollViewDemo';
+// import ScrollViewDemo from './src/components/ScrollViewDemo';
+import FlatListDemo from './src/components/FlatListDemo';
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -41,7 +42,8 @@ function App() {
         {/* <TouchableWithoutFeedbackDemo /> */}
         {/* <ButtonDemo /> */}
         {/* <PressableDemo /> */}
-        <ScrollViewDemo />
+        {/* <ScrollViewDemo /> */}
+        <FlatListDemo />
       </View>
     </SafeAreaView>
   );

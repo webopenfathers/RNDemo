@@ -24,7 +24,9 @@ import {
 // import ButtonDemo from './src/components/ButtonDemo';
 // import PressableDemo from './src/components/PressableDemo';
 // import ScrollViewDemo from './src/components/ScrollViewDemo';
-import FlatListDemo from './src/components/FlatListDemo';
+// import FlatListDemo from './src/components/FlatListDemo';
+
+import SectionListDemo from './src/components/SectionListDemo';
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -43,7 +45,8 @@ function App() {
         {/* <ButtonDemo /> */}
         {/* <PressableDemo /> */}
         {/* <ScrollViewDemo /> */}
-        <FlatListDemo />
+        {/* <FlatListDemo /> */}
+        <SectionListDemo />
       </View>
     </SafeAreaView>
   );

@@ -31,8 +31,8 @@ import {
 // import SwitchDemo from './src/components/SwitchDemo';
 // import PersonalInfo from './src/components/PersonalInfo';
 // import AlertAndConsole from './src/components/API/AlertAndConsole';
-
-import DimensionAnduseWindowDimension from './src/components/API/DimensionAnduseWindowDimension';
+// import DimensionAnduseWindowDimension from './src/components/API/DimensionAnduseWindowDimension';
+import PlatformAPI from './src/components/API/Platform';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -59,7 +59,8 @@ function App() {
         {/* <SwitchDemo /> */}
         {/* <PersonalInfo /> */}
         {/* <AlertAndConsole /> */}
-        <DimensionAnduseWindowDimension />
+        {/* <DimensionAnduseWindowDimension /> */}
+        <PlatformAPI />
       </View>
     </SafeAreaView>
   );

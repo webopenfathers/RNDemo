@@ -36,8 +36,9 @@ import {
 // import StyleSheetAPI from './src/components/API/StyleSheet'
 // import LinkingAPI from './src/components/API/Linking';
 
-import PixelRationAPI from './src/components/API/PixelRatio';
+// import PixelRationAPI from './src/components/API/PixelRatio';
 
+import BackHandlerAPI from './src/components/API/BackHandler';
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -67,7 +68,8 @@ function App() {
         {/* <PlatformAPI /> */}
         {/* <StyleSheetAPI /> */}
         {/* <LinkingAPI /> */}
-        <PixelRationAPI />
+        {/* <PixelRationAPI /> */}
+        <BackHandlerAPI />
       </View>
     </SafeAreaView>
   );

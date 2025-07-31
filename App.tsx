@@ -30,8 +30,9 @@ import {
 // import StatusBarDemo from './src/components/StatusBarDemo';
 // import SwitchDemo from './src/components/SwitchDemo';
 // import PersonalInfo from './src/components/PersonalInfo';
+// import AlertAndConsole from './src/components/API/AlertAndConsole';
 
-import AlertAndConsole from './src/components/API/AlertAndConsole';
+import DimensionAnduseWindowDimension from './src/components/API/DimensionAnduseWindowDimension';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -57,7 +58,8 @@ function App() {
         {/* <StatusBarDemo /> */}
         {/* <SwitchDemo /> */}
         {/* <PersonalInfo /> */}
-        <AlertAndConsole />
+        {/* <AlertAndConsole /> */}
+        <DimensionAnduseWindowDimension />
       </View>
     </SafeAreaView>
   );

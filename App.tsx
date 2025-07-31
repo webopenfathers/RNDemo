@@ -28,8 +28,9 @@ import {
 // import SectionListDemo from './src/components/SectionListDemo';
 // import ModalDemo from './src/components/ModalDemo';
 // import StatusBarDemo from './src/components/StatusBarDemo';
+// import SwitchDemo from './src/components/SwitchDemo';
 
-import SwitchDemo from './src/components/SwitchDemo';
+import PersonalInfo from './src/components/PersonalInfo';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -53,7 +54,8 @@ function App() {
         {/* <SectionListDemo /> */}
         {/* <ModalDemo /> */}
         {/* <StatusBarDemo /> */}
-        <SwitchDemo />
+        {/* <SwitchDemo /> */}
+        <PersonalInfo />
       </View>
     </SafeAreaView>
   );

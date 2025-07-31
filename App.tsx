@@ -26,8 +26,9 @@ import {
 // import ScrollViewDemo from './src/components/ScrollViewDemo';
 // import FlatListDemo from './src/components/FlatListDemo';
 // import SectionListDemo from './src/components/SectionListDemo';
+// import ModalDemo from './src/components/ModalDemo';
 
-import ModalDemo from './src/components/ModalDemo';
+import StatusBarDemo from './src/components/StatusBarDemo';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -49,7 +50,8 @@ function App() {
         {/* <ScrollViewDemo /> */}
         {/* <FlatListDemo /> */}
         {/* <SectionListDemo /> */}
-        <ModalDemo />
+        {/* <ModalDemo /> */}
+        <StatusBarDemo />
       </View>
     </SafeAreaView>
   );

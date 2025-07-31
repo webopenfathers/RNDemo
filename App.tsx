@@ -34,7 +34,9 @@ import {
 // import DimensionAnduseWindowDimension from './src/components/API/DimensionAnduseWindowDimension';
 // import PlatformAPI from './src/components/API/Platform';
 // import StyleSheetAPI from './src/components/API/StyleSheet'
-import LinkingAPI from './src/components/API/Linking';
+// import LinkingAPI from './src/components/API/Linking';
+
+import PixelRationAPI from './src/components/API/PixelRatio';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -64,7 +66,8 @@ function App() {
         {/* <DimensionAnduseWindowDimension /> */}
         {/* <PlatformAPI /> */}
         {/* <StyleSheetAPI /> */}
-        <LinkingAPI />
+        {/* <LinkingAPI /> */}
+        <PixelRationAPI />
       </View>
     </SafeAreaView>
   );

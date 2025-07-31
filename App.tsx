@@ -29,8 +29,9 @@ import {
 // import ModalDemo from './src/components/ModalDemo';
 // import StatusBarDemo from './src/components/StatusBarDemo';
 // import SwitchDemo from './src/components/SwitchDemo';
+// import PersonalInfo from './src/components/PersonalInfo';
 
-import PersonalInfo from './src/components/PersonalInfo';
+import AlertAndConsole from './src/components/API/AlertAndConsole';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -55,7 +56,8 @@ function App() {
         {/* <ModalDemo /> */}
         {/* <StatusBarDemo /> */}
         {/* <SwitchDemo /> */}
-        <PersonalInfo />
+        {/* <PersonalInfo /> */}
+        <AlertAndConsole />
       </View>
     </SafeAreaView>
   );

@@ -32,7 +32,9 @@ import {
 // import PersonalInfo from './src/components/PersonalInfo';
 // import AlertAndConsole from './src/components/API/AlertAndConsole';
 // import DimensionAnduseWindowDimension from './src/components/API/DimensionAnduseWindowDimension';
-import PlatformAPI from './src/components/API/Platform';
+// import PlatformAPI from './src/components/API/Platform';
+
+import StyleSheetAPI from './src/components/API/StyleSheet'
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -60,7 +62,8 @@ function App() {
         {/* <PersonalInfo /> */}
         {/* <AlertAndConsole /> */}
         {/* <DimensionAnduseWindowDimension /> */}
-        <PlatformAPI />
+        {/* <PlatformAPI /> */}
+        <StyleSheetAPI />
       </View>
     </SafeAreaView>
   );

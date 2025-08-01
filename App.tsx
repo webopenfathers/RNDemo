@@ -44,7 +44,8 @@ import {
 
 // import VibrationAPI from './src/components/API/Vibration'
 
-import ToastAndroidAPI from './src/components/API/ToastAndroid'
+// import ToastAndroidAPI from './src/components/API/ToastAndroid'
+import TransformAPI from './src/components/API/Transform'
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -79,7 +80,8 @@ function App() {
         {/* <BackHandlerAPI /> */}
         {/* <PermissionsAndroidAPI /> */}
         {/* <VibrationAPI /> */}
-        <ToastAndroidAPI />
+        {/* <ToastAndroidAPI /> */}
+        <TransformAPI />
       </View>
     </SafeAreaView>
   );

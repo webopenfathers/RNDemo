@@ -42,7 +42,9 @@ import {
 
 // import PermissionsAndroidAPI from './src/components/API/PermissionsAndroid'
 
-import VibrationAPI from './src/components/API/Vibration'
+// import VibrationAPI from './src/components/API/Vibration'
+
+import ToastAndroidAPI from './src/components/API/ToastAndroid'
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -76,7 +78,8 @@ function App() {
         {/* <PixelRationAPI /> */}
         {/* <BackHandlerAPI /> */}
         {/* <PermissionsAndroidAPI /> */}
-        <VibrationAPI />
+        {/* <VibrationAPI /> */}
+        <ToastAndroidAPI />
       </View>
     </SafeAreaView>
   );

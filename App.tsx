@@ -46,8 +46,8 @@ import {
 // import TransformAPI from './src/components/API/Transform'
 // import KeyboardAPI from './src/components/API/Keyboard'
 // import Anim1 from './src/components/Animated/Anim1'
-
-import Anim2 from './src/components/Animated/Anim2'
+// import Anim2 from './src/components/Animated/Anim2'
+import Anim3 from './src/components/Animated/Anim3'
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -86,7 +86,8 @@ function App() {
         {/* <TransformAPI /> */}
         {/* <KeyboardAPI /> */}
         {/* <Anim1 /> */}
-        <Anim2 />
+        {/* <Anim2 /> */}
+        <Anim3 />
       </View>
     </SafeAreaView>
   );

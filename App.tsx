@@ -46,7 +46,8 @@ import {
 
 // import ToastAndroidAPI from './src/components/API/ToastAndroid'
 // import TransformAPI from './src/components/API/Transform'
-import KeyboardAPI from './src/components/API/Keyboard'
+// import KeyboardAPI from './src/components/API/Keyboard'
+import Anim1 from './src/components/Animated/Anim1'
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -83,8 +84,8 @@ function App() {
         {/* <VibrationAPI /> */}
         {/* <ToastAndroidAPI /> */}
         {/* <TransformAPI /> */}
-
-        <KeyboardAPI />
+        {/* <KeyboardAPI /> */}
+        <Anim1 />
       </View>
     </SafeAreaView>
   );

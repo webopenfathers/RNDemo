@@ -40,7 +40,9 @@ import {
 
 // import BackHandlerAPI from './src/components/API/BackHandler';
 
-import PermissionsAndroidAPI from './src/components/API/PermissionsAndroid'
+// import PermissionsAndroidAPI from './src/components/API/PermissionsAndroid'
+
+import VibrationAPI from './src/components/API/Vibration'
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -73,7 +75,8 @@ function App() {
         {/* <LinkingAPI /> */}
         {/* <PixelRationAPI /> */}
         {/* <BackHandlerAPI /> */}
-        <PermissionsAndroidAPI />
+        {/* <PermissionsAndroidAPI /> */}
+        <VibrationAPI />
       </View>
     </SafeAreaView>
   );

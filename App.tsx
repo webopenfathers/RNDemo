@@ -30,24 +30,24 @@ import {
 // import StatusBarDemo from './src/components/StatusBarDemo';
 // import SwitchDemo from './src/components/SwitchDemo';
 // import PersonalInfo from './src/components/PersonalInfo';
+
+
+
 // import AlertAndConsole from './src/components/API/AlertAndConsole';
 // import DimensionAnduseWindowDimension from './src/components/API/DimensionAnduseWindowDimension';
 // import PlatformAPI from './src/components/API/Platform';
 // import StyleSheetAPI from './src/components/API/StyleSheet'
 // import LinkingAPI from './src/components/API/Linking';
-
 // import PixelRationAPI from './src/components/API/PixelRatio';
-
 // import BackHandlerAPI from './src/components/API/BackHandler';
-
 // import PermissionsAndroidAPI from './src/components/API/PermissionsAndroid'
-
 // import VibrationAPI from './src/components/API/Vibration'
-
 // import ToastAndroidAPI from './src/components/API/ToastAndroid'
 // import TransformAPI from './src/components/API/Transform'
 // import KeyboardAPI from './src/components/API/Keyboard'
-import Anim1 from './src/components/Animated/Anim1'
+// import Anim1 from './src/components/Animated/Anim1'
+
+import Anim2 from './src/components/Animated/Anim2'
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -85,7 +85,8 @@ function App() {
         {/* <ToastAndroidAPI /> */}
         {/* <TransformAPI /> */}
         {/* <KeyboardAPI /> */}
-        <Anim1 />
+        {/* <Anim1 /> */}
+        <Anim2 />
       </View>
     </SafeAreaView>
   );

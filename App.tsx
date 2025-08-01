@@ -38,7 +38,10 @@ import {
 
 // import PixelRationAPI from './src/components/API/PixelRatio';
 
-import BackHandlerAPI from './src/components/API/BackHandler';
+// import BackHandlerAPI from './src/components/API/BackHandler';
+
+import PermissionsAndroidAPI from './src/components/API/PermissionsAndroid'
+
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -69,7 +72,8 @@ function App() {
         {/* <StyleSheetAPI /> */}
         {/* <LinkingAPI /> */}
         {/* <PixelRationAPI /> */}
-        <BackHandlerAPI />
+        {/* <BackHandlerAPI /> */}
+        <PermissionsAndroidAPI />
       </View>
     </SafeAreaView>
   );

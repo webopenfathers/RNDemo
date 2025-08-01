@@ -1,5 +1,7 @@
 package com.rndemo;
 
+import static android.os.Build.VERSION_CODES.R;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,9 +15,9 @@ public class TestActivity extends AppCompatActivity {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
-        setContentView(R.layout.activity_test);
+        setContentView(R);
 
-        TextView tv = findViewById(R.id.tv_test);
+        TextView tv = findViewById(R);
         tv.setText("目标页面");
 
         // openUrl的方式

@@ -95,8 +95,7 @@ const SectionListDemo = () => {
       sections={SectionData}
       renderItem={renderItem}
       ListFooterComponent={ListFooter}
-      ListHeaderComponen
-      t={ListHeader}
+      ListHeaderComponent={ListHeader}
       renderSectionHeader={renderSectionHeader}
       keyExtractor={(item, index) => `${item}-${index}`}
       contentContainerStyle={styles.containerStyle}

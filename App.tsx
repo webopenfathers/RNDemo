@@ -52,8 +52,9 @@ import {
 // import AnimatedSpring from './src/components/Animated/AnimatedSpring5'
 // import AnimatedTiming from './src/components/Animated/AnimatedTiming6'
 // import AnimatedValueXY from './src/components/Animated/AnimatedValueXY7'
+// import Anim8 from './src/components/Animated/Anim8'
 
-import Anim8 from './src/components/Animated/Anim8'
+import FollowScroll from './src/components/Animated/FollowScroll'
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -98,7 +99,8 @@ function App() {
         {/* <AnimatedSpring /> */}
         {/* <AnimatedTiming /> */}
         {/* <AnimatedValueXY /> */}
-        <Anim8 />
+        {/* <Anim8 /> */}
+        <FollowScroll />
       </View>
     </SafeAreaView>
   );

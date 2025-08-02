@@ -49,8 +49,8 @@ import {
 // import Anim2 from './src/components/Animated/Anim2'
 // import Anim3 from './src/components/Animated/Anim3'
 // import AnimatedDecay from './src/components/Animated/AnimatedDecay4'
-
-import AnimatedSpring from './src/components/Animated/AnimatedSpring5'
+// import AnimatedSpring from './src/components/Animated/AnimatedSpring5'
+import AnimatedTiming from './src/components/Animated/AnimatedTiming6'
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -92,7 +92,8 @@ function App() {
         {/* <Anim2 /> */}
         {/* <Anim3 /> */}
         {/* <AnimatedDecay /> */}
-        <AnimatedSpring />
+        {/* <AnimatedSpring /> */}
+        <AnimatedTiming />
       </View>
     </SafeAreaView>
   );

@@ -47,7 +47,8 @@ import {
 // import KeyboardAPI from './src/components/API/Keyboard'
 // import Anim1 from './src/components/Animated/Anim1'
 // import Anim2 from './src/components/Animated/Anim2'
-import Anim3 from './src/components/Animated/Anim3'
+// import Anim3 from './src/components/Animated/Anim3'
+import AnimatedDecay from './src/components/Animated/AnimatedDecay4'
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -87,7 +88,8 @@ function App() {
         {/* <KeyboardAPI /> */}
         {/* <Anim1 /> */}
         {/* <Anim2 /> */}
-        <Anim3 />
+        {/* <Anim3 /> */}
+        <AnimatedDecay />
       </View>
     </SafeAreaView>
   );

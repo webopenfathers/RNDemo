@@ -1,10 +1,6 @@
 import React, { useRef } from 'react'
 import { StyleSheet, View, Button, Animated, Easing } from 'react-native'
 
-
-// Animated.ValueXY 矢量动画
-// Animated.ValueXY({ x: number, y: number })
-
 const AnimatedValueXY = () => {
 
   const vector = useRef(new Animated.ValueXY({ x: 0, y: 10 })).current

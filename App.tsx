@@ -53,10 +53,10 @@ import {
 // import AnimatedTiming from './src/components/Animated/AnimatedTiming6'
 // import AnimatedValueXY from './src/components/Animated/AnimatedValueXY7'
 // import Anim8 from './src/components/Animated/Anim8'
-
 // import FollowScroll from './src/components/Animated/FollowScroll'
+// import Anim9 from './src/components/Animated/Anim9'
 
-import Anim9 from './src/components/Animated/Anim9'
+import LayoutAnimation10 from './src/components/Animated/LayoutAnimation10'
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -103,7 +103,8 @@ function App() {
         {/* <AnimatedValueXY /> */}
         {/* <Anim8 /> */}
         {/* <FollowScroll /> */}
-        <Anim9 />
+        {/* <Anim9 /> */}
+        <LayoutAnimation10 />
       </View>
     </SafeAreaView>
   );

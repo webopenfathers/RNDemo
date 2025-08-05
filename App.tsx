@@ -58,7 +58,9 @@ import {
 
 // import LayoutAnimation10 from './src/components/Animated/LayoutAnimation10'
 
-import AnimShow from './src/components/Animated/AnimShow'
+// import AnimShow from './src/components/Animated/AnimShow'
+
+import RootView from './src/context/RootView'
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -107,7 +109,8 @@ function App() {
         {/* <FollowScroll /> */}
         {/* <Anim9 /> */}
         {/* <LayoutAnimation10 /> */}
-        <AnimShow />
+        {/* <AnimShow /> */}
+        <RootView />
       </View>
     </SafeAreaView>
   );

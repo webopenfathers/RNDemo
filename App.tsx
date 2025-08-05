@@ -56,7 +56,9 @@ import {
 // import FollowScroll from './src/components/Animated/FollowScroll'
 // import Anim9 from './src/components/Animated/Anim9'
 
-import LayoutAnimation10 from './src/components/Animated/LayoutAnimation10'
+// import LayoutAnimation10 from './src/components/Animated/LayoutAnimation10'
+
+import AnimShow from './src/components/Animated/AnimShow'
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -104,7 +106,8 @@ function App() {
         {/* <Anim8 /> */}
         {/* <FollowScroll /> */}
         {/* <Anim9 /> */}
-        <LayoutAnimation10 />
+        {/* <LayoutAnimation10 /> */}
+        <AnimShow />
       </View>
     </SafeAreaView>
   );

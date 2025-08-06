@@ -113,7 +113,7 @@ function App() {
         {/* <LayoutAnimation10 /> */}
         {/* <AnimShow /> */}
         {/* <RootView /> */}
-        <InfoView />
+        <InfoView name="Alice" age={28} />
       </View>
     </SafeAreaView>
   );

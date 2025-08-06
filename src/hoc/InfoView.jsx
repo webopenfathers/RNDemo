@@ -3,7 +3,9 @@ import { StyleSheet, View, Image, Text, StatusBar } from 'react-native';
 import icon_avatar from '../assets/images/default_avatar.png';
 import widthFloatButton from './withFloatButton';
 
-const InfoView = widthFloatButton(() => {
+const InfoView = widthFloatButton(props => {
+  // 2.这里面的props有值是因为widthFloatButton中HOCView高阶组件传递的。
+  console.log(props, '被包裹的props');
   const styles = darkStyles;
   return (
     <View style={styles.content}>

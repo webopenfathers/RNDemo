@@ -60,7 +60,9 @@ import {
 
 // import AnimShow from './src/components/Animated/AnimShow'
 
-import RootView from './src/context/RootView'
+// import RootView from './src/context/RootView'
+
+import InfoView from './src/hoc/InfoView'
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -110,7 +112,8 @@ function App() {
         {/* <Anim9 /> */}
         {/* <LayoutAnimation10 /> */}
         {/* <AnimShow /> */}
-        <RootView />
+        {/* <RootView /> */}
+        <InfoView />
       </View>
     </SafeAreaView>
   );

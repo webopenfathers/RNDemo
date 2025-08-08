@@ -75,7 +75,11 @@ import {
 
 // import RefDemo from './src/ref/RefDemo'
 
-import RefDemo2 from './src/ref/RefDemo2'
+// import RefDemo2 from './src/ref/RefDemo2'
+
+// import RefDemo3 from './src/ref/RefDemo3'
+
+import RefDemo4 from './src/ref/RefDemo4'
 
 
 function App() {
@@ -131,7 +135,9 @@ function App() {
         {/* <MemoPage /> */}
         {/* <UseMemoAndUseCallback /> */}
         {/* <RefDemo /> */}
-        <RefDemo2 />
+        {/* <RefDemo2 /> */}
+        {/* <RefDemo3 /> */}
+        <RefDemo4 />
       </View>
     </SafeAreaView>
   );

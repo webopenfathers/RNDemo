@@ -68,7 +68,10 @@ import {
 // import InfoView from './src/hoc/InfoView'
 
 // 六：函数组件中的memo 和 类组件中的shouldComponentUpdate 性能优化(避免重复渲染)
-import MemoPage from './src/memo/MemoPage'
+// import MemoPage from './src/memo/MemoPage'
+
+import UseMemoAndUseCallback from './src/usememo'
+
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -120,7 +123,8 @@ function App() {
         {/* <AnimShow /> */}
         {/* <RootView /> */}
         {/* <InfoView name="Alice" age={28} /> */}
-        <MemoPage />
+        {/* <MemoPage /> */}
+        <UseMemoAndUseCallback />
       </View>
     </SafeAreaView>
   );

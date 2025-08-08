@@ -70,7 +70,10 @@ import {
 // 六：函数组件中的memo 和 类组件中的shouldComponentUpdate 性能优化(避免重复渲染)
 // import MemoPage from './src/memo/MemoPage'
 
-import UseMemoAndUseCallback from './src/usememo'
+// 七：useMemo和useCallback
+// import UseMemoAndUseCallback from './src/usememo'
+
+import RefDemo from './src/ref/RefDemo'
 
 
 function App() {
@@ -124,7 +127,8 @@ function App() {
         {/* <RootView /> */}
         {/* <InfoView name="Alice" age={28} /> */}
         {/* <MemoPage /> */}
-        <UseMemoAndUseCallback />
+        {/* <UseMemoAndUseCallback /> */}
+        <RefDemo />
       </View>
     </SafeAreaView>
   );

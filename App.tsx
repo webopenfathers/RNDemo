@@ -73,7 +73,9 @@ import {
 // 七：useMemo和useCallback
 // import UseMemoAndUseCallback from './src/usememo'
 
-import RefDemo from './src/ref/RefDemo'
+// import RefDemo from './src/ref/RefDemo'
+
+import RefDemo2 from './src/ref/RefDemo2'
 
 
 function App() {
@@ -128,7 +130,8 @@ function App() {
         {/* <InfoView name="Alice" age={28} /> */}
         {/* <MemoPage /> */}
         {/* <UseMemoAndUseCallback /> */}
-        <RefDemo />
+        {/* <RefDemo /> */}
+        <RefDemo2 />
       </View>
     </SafeAreaView>
   );

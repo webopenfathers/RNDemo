@@ -1,25 +1,54 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 
-import { View, Button, Text, StyleSheet, FlatList, Switch } from 'react-native';
+import {
+  View,
+  Button,
+  Text,
+  StyleSheet,
+  FlatList,
+  Switch,
+  TouchableOpacity,
+} from 'react-native';
 
 import { ListData, ListData2 } from '../constants/Data';
 import { TypeColors } from '../constants/Data';
 
-// useMemo缓存计算结果
 
 const ConsumeList = () => {
-  console.log(ListData, 'ListData');
-
   const [data, setData] = useState(ListData);
   const [showType, setShowType] = useState(true);
 
-  const calculateTotal = useMemo(() => {
-    console.log('重新计算合计...');
-    return data.reduce((acc, cur) => acc + cur.amount, 0);
+  // 1、useMemo缓存值
+  // const calculateTotal = useMemo(() => {
+  //   console.log('重新计算合计缓存值...');
+  //   return data.reduce((acc, cur) => acc + cur.amount, 0);
+  // }, [data]);
+
+  // 2、useMemo缓存ui渲染
+  const totalAmountView = useMemo(() => {
+    console.log('重新计算合计缓存ui渲染...');
+    const total = data.reduce((acc, cur) => acc + cur.amount, 0);
+    return (
+      <View style={styles.totalLayout}>
+        <Text style={styles.totalTxt}>{total}</Text>
+        <Text style={styles.totalTxt}>合计：</Text>
+      </View>
+    );
   }, [data]);
 
-  const renderItem = ({ item }) => (
-    <View style={styles.itemLayout}>
+  // 3、useCallback 缓存回调函数
+  const onItemPress = useCallback(
+    (item, index) => () => {
+      console.log('onItemPress重新生成新的...', item, index);
+    },
+    [],
+  );
+
+  const renderItem = ({ item, index }) => (
+    <TouchableOpacity
+      style={styles.itemLayout}
+      onPress={onItemPress(item, index)}
+    >
       <View style={styles.labelRow}>
         <Text style={[styles.labelTxt, styles.first]}>序号</Text>
         {showType && <Text style={[styles.labelTxt, styles.second]}>类型</Text>}
@@ -43,7 +72,7 @@ const ConsumeList = () => {
         <Text style={styles.valueTxt}>{item.name}</Text>
         <Text style={[styles.valueTxt, styles.last]}>{item.amount}</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 
   return (
@@ -62,10 +91,14 @@ const ConsumeList = () => {
         keyExtractor={item => `${item.index}-${item.name}`}
         renderItem={renderItem}
       />
-      <View style={styles.totalLayout}>
+      {/* useMemo缓存值 */}
+      {/* <View style={styles.totalLayout}>
         <Text style={styles.totalTxt}>{calculateTotal}</Text>
         <Text style={styles.totalTxt}>合计：</Text>
-      </View>
+      </View> */}
+
+      {/* useMemo缓存ui */}
+      {totalAmountView}
     </View>
   );
 };

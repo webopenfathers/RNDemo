@@ -79,7 +79,9 @@ import {
 
 // import RefDemo3 from './src/ref/RefDemo3'
 
-import RefDemo4 from './src/ref/RefDemo4'
+// import RefDemo4 from './src/ref/RefDemo4'
+
+import ComparisonModel from './src/demo/comparisonModels'
 
 
 function App() {
@@ -137,7 +139,8 @@ function App() {
         {/* <RefDemo /> */}
         {/* <RefDemo2 /> */}
         {/* <RefDemo3 /> */}
-        <RefDemo4 />
+        {/* <RefDemo4 /> */}
+        <ComparisonModel />
       </View>
     </SafeAreaView>
   );

@@ -5,6 +5,9 @@ import ProductImage from './components/productImage'
 import MajorParam from './components/majorParam'
 import DetailParam from "./components/detailParam"
 import { useRef, useState } from "react"
+import { getStyle } from './utils'
+
+const commonStyle = getStyle()
 
 
 const ComparisonModel = () => {
@@ -49,7 +52,7 @@ const ComparisonModel = () => {
         ref={scrollModalRef}
         bounces={false}
         horizontal
-        contentContainerStyle={{ paddingLeft: 20 }}
+        contentContainerStyle={{ paddingLeft: commonStyle.Space }}
         showsHorizontalScrollIndicator={false}
         onTouchStart={() => currentType.current = 'modal'}
         onScroll={(event) => currentType.current === 'modal' && webGennSui(event, 'modal')}
@@ -65,6 +68,7 @@ const ComparisonModel = () => {
       {/* 跟随水平滚动区域 */}
       <Animated.ScrollView
         ref={scrollHorizonRef}
+        contentContainerStyle={{ paddingLeft: commonStyle.Space }}
         onTouchStart={() => currentType.current = 'content'}
         onScroll={(event) => currentType.current === 'content' && webGennSui(event, 'content')}
         horizontal
@@ -72,7 +76,7 @@ const ComparisonModel = () => {
         showsHorizontalScrollIndicator={false}
         style={{
           flex: 1,
-          paddingBottom: 100
+          paddingBottom: 100,
         }}>
         <View>
           {/* 商品主图 */}

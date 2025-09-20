@@ -2,6 +2,11 @@ import { View, Text, StyleSheet, Pressable } from 'react-native';
 import ModelSelection from './modelSelection';
 import { useRef } from 'react';
 
+import { getStyle } from '../utils'
+
+const commonStyle = getStyle()
+
+
 const mobileList = [
   {
     name: 'Pura 80 Pro'
@@ -47,11 +52,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     height: 48,
-    marginRight: 20,
-    borderWidth: 1,
+    marginRight: commonStyle.Space,
+    borderWidth: commonStyle.border,
     borderRadius: 8,
-    width: 155,
-    paddingHorizontal: 10,
+    width: commonStyle.header.width,
     borderColor: "rgba(0, 0, 0, 0.1)"
   },
   itemTxt: {

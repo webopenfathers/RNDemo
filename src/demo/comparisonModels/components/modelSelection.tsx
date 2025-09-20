@@ -51,9 +51,9 @@ const modelSelection = (props: any, ref: any) => {
               <Image
                 source={{ uri: urlPrefix + photoPath + photoName }}
                 style={{ width: itemWidth, height: itemWidth }} />
-              <Text
-                style={{ fontSize: 12, marginTop: 8, height: 32, backgroundColor: "red", textAlign: 'center' }}
-              >{subItem.disPrdBreifName}</Text>
+              <Text style={{ fontSize: 12, marginTop: 8, height: 32, textAlign: 'center' }}>
+                {subItem.disPrdBreifName}
+              </Text>
               <Text style={{ marginTop: 8, fontSize: 12 }}>￥{subItem.minPrice}起</Text>
             </View>
           })

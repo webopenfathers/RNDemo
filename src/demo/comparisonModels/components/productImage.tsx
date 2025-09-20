@@ -6,7 +6,7 @@ import jx4 from '../assets/jx4.png'
 import jx5 from '../assets/jx5.png'
 
 
-const imgList = [jx1, jx2, jx3, jx4, jx5, jx1]
+const imgList = [jx4, jx2, jx3, jx1, jx5, jx1]
 
 // 商品主图
 const ProductImage = (props: any) => {

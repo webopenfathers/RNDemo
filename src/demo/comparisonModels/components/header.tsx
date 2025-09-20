@@ -36,7 +36,7 @@ const Header = () => {
       mobileList.map((item, index) => (
         // @ts-ignore
         <Pressable key={index} style={styles.itemContent} onPress={() => modelRef?.current?.showModal()}>
-          <Text numberOfLines={2} ellipsizeMode="tail" style={styles.itemTxt}>{item.name + '88888888888888888888'}</Text>
+          <Text numberOfLines={2} ellipsizeMode="tail" style={styles.itemTxt}>{item.name}</Text>
         </Pressable>
       ))
     }

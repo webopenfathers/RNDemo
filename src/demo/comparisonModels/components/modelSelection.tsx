@@ -49,7 +49,7 @@ const modelSelection = (props: any, ref: any) => {
             return <View key={`${subItem.disPrdBreifName}-${subIndex}`}
               style={{ width: itemWidth, marginRight: 8, marginTop: 8, paddingBottom: 12, alignItems: "center" }}>
               <Image
-                source={{ uri: urlPrefix + photoPath + photoName }}
+                source={{ uri: urlPrefix + photoPath + '800_800_' + photoName }}
                 style={{ width: itemWidth, height: itemWidth }} />
               <Text style={{ fontSize: 12, marginTop: 8, height: 32, textAlign: 'center' }}>
                 {subItem.disPrdBreifName}

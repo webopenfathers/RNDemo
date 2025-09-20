@@ -1,4 +1,6 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Pressable } from 'react-native';
+import ModelSelection from './modelSelection';
+import { useRef } from 'react';
 
 const mobileList = [
   {
@@ -22,14 +24,18 @@ const mobileList = [
 ]
 
 const Header = () => {
+  const modelRef = useRef<typeof ModelSelection | null>(null)
+
   return <View style={styles.content}>
     {
       mobileList.map((item, index) => (
-        <View key={index} style={styles.itemContent}>
+        // @ts-ignore
+        <Pressable key={index} style={styles.itemContent} onPress={() => modelRef?.current?.showModal()}>
           <Text numberOfLines={2} ellipsizeMode="tail" style={styles.itemTxt}>{item.name}</Text>
-        </View>
+        </Pressable>
       ))
     }
+    <ModelSelection ref={modelRef} />
   </View>
 }
 

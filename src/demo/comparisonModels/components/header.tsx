@@ -36,7 +36,7 @@ const Header = () => {
       mobileList.map((item, index) => (
         // @ts-ignore
         <Pressable key={index} style={styles.itemContent} onPress={() => modelRef?.current?.showModal()}>
-          <Text numberOfLines={2} ellipsizeMode="tail" style={styles.itemTxt}>{item.name}</Text>
+          <Text numberOfLines={2} ellipsizeMode="tail" style={styles.itemTxt}>{item.name + '88888888888888888888'}</Text>
         </Pressable>
       ))
     }
@@ -59,7 +59,8 @@ const styles = StyleSheet.create({
     borderColor: "rgba(0, 0, 0, 0.1)"
   },
   itemTxt: {
-    fontSize: 12
+    fontSize: 12,
+    paddingHorizontal: 12
   }
 })
 

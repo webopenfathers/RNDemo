@@ -59,15 +59,15 @@ const ComparisonModel = () => {
       // 执行淡入动画
       Animated.timing(fadeAnim, {
         toValue: 1,
-        duration: 300,
-        useNativeDriver: false,
+        duration: 500,
+        useNativeDriver: true,
       }).start();
     } else if (offsetY <= scrollThreshold && showButton) {
       // 执行淡出动画，动画结束后隐藏按钮
       Animated.timing(fadeAnim, {
         toValue: 0,
-        duration: 300,
-        useNativeDriver: false,
+        duration: 500,
+        useNativeDriver: true,
       }).start(() => setShowButton(false));
     }
   }
@@ -80,8 +80,8 @@ const ComparisonModel = () => {
       // 等待动画结束后再隐藏
       Animated.timing(fadeAnim, {
         toValue: 0,
-        duration: 300,
-        useNativeDriver: false
+        duration: 500,
+        useNativeDriver: true
       }).start(() => setShowButton(false));
     }
   }
@@ -137,16 +137,18 @@ const ComparisonModel = () => {
       <FixedContent initBoxPos={initBoxPos} detailParamPos={detailParamPos} detailList={detailList} />
     </Animated.ScrollView>
     {/* 按钮 淡入淡出动画 和 平移动画 */}
-    {showButton && <Animated.View
+    <Animated.View
       style={[
         {
+          backgroundColor: "red",
+          display: showButton ? 'flex' : 'none',
           opacity: fadeAnim,
           transform: [
             {
               // interpolate() 是一个映射函数，它将一个输入范围（input）的值，线性地映射到另一个输出范围（output）的值。
               translateY: fadeAnim.interpolate({
                 inputRange: [0, 1],
-                outputRange: [20, 0], // 从下方滑入
+                outputRange: [30, 0], // 从下方滑入
               }),
             },
           ],
@@ -155,7 +157,7 @@ const ComparisonModel = () => {
       <Pressable onPress={scrollToTop}>
         <GoTop />
       </Pressable>
-    </Animated.View>}
+    </Animated.View>
   </View>
 }
 

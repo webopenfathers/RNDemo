@@ -1,18 +1,22 @@
-import { ScrollView, View, Text, StatusBar, StyleSheet, Animated } from "react-native"
+import { ScrollView, View, StatusBar, StyleSheet, Animated, Dimensions, Pressable } from "react-native"
 import Header from "./components/header"
 import FixedContent from "./components/fixedContent"
 import ProductImage from './components/productImage'
 import MajorParam from './components/majorParam'
 import DetailParam from "./components/detailParam"
+import GoTop from "./components/goTop"
 import { useRef, useState } from "react"
 import { getStyle } from './utils'
 
 const commonStyle = getStyle()
 
-
+const windowHeight = Dimensions.get('window').height;
 const ComparisonModel = () => {
+  const [showButton, setShowButton] = useState(false);
   const scrollHorizonRef = useRef<ScrollView>(null)
+  const scrollVerticalRef = useRef<ScrollView>(null)
   const scrollModalRef = useRef<ScrollView>(null)
+  const fadeAnim = useRef(new Animated.Value(0)).current; // 用于淡入淡出动画
   // 大盒子top定位
   const [initBoxPos, setInitBoxPos] = useState(0)
   // 详细参数定位
@@ -45,6 +49,44 @@ const ComparisonModel = () => {
   }
 
 
+  // 滚动监听-----执行回到顶部逻辑
+  const handleScroll = (event: any) => {
+    const offsetY = event.nativeEvent.contentOffset.y;
+    // 滚动超过屏幕高度的 60% 时出现
+    const scrollThreshold = windowHeight * 0.6;
+    if (offsetY > scrollThreshold && !showButton) {
+      setShowButton(true);
+      // 执行淡入动画
+      Animated.timing(fadeAnim, {
+        toValue: 1,
+        duration: 300,
+        useNativeDriver: false,
+      }).start();
+    } else if (offsetY <= scrollThreshold && showButton) {
+      // 执行淡出动画，动画结束后隐藏按钮
+      Animated.timing(fadeAnim, {
+        toValue: 0,
+        duration: 300,
+        useNativeDriver: false,
+      }).start(() => setShowButton(false));
+    }
+  }
+
+
+  // 点击回到顶部逻辑
+  const scrollToTop = () => {
+    if (scrollVerticalRef.current) {
+      scrollVerticalRef.current.scrollTo({ y: 0, animated: true });
+      // 等待动画结束后再隐藏
+      Animated.timing(fadeAnim, {
+        toValue: 0,
+        duration: 300,
+        useNativeDriver: false
+      }).start(() => setShowButton(false));
+    }
+  }
+
+
   return <View style={styles.root}>
     {/* 顶部横向滚动的机型对比页面 */}
     <View>
@@ -63,6 +105,8 @@ const ComparisonModel = () => {
     </View>
     {/* 竖直滚动区域 */}
     <Animated.ScrollView
+      ref={scrollVerticalRef}
+      onScroll={handleScroll}
       showsVerticalScrollIndicator={false}
       style={{ flex: 1 }}>
       {/* 跟随水平滚动区域 */}
@@ -92,6 +136,26 @@ const ComparisonModel = () => {
       {/* 不跟随水平滚动,但跟随垂直滚动 */}
       <FixedContent initBoxPos={initBoxPos} detailParamPos={detailParamPos} detailList={detailList} />
     </Animated.ScrollView>
+    {/* 按钮 淡入淡出动画 和 平移动画 */}
+    {showButton && <Animated.View
+      style={[
+        {
+          opacity: fadeAnim,
+          transform: [
+            {
+              // interpolate() 是一个映射函数，它将一个输入范围（input）的值，线性地映射到另一个输出范围（output）的值。
+              translateY: fadeAnim.interpolate({
+                inputRange: [0, 1],
+                outputRange: [20, 0], // 从下方滑入
+              }),
+            },
+          ],
+        },
+      ]}>
+      <Pressable onPress={scrollToTop}>
+        <GoTop />
+      </Pressable>
+    </Animated.View>}
   </View>
 }
 

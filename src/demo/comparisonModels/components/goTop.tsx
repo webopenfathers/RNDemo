@@ -15,11 +15,11 @@ const styles = StyleSheet.create({
     position: "absolute",
     right: 16,
     bottom: 80,
-    width: 32,
-    height: 32,
+    width: 40,
+    height: 40,
     backgroundColor: "#fff",
-    borderRadius: 16,
-    padding: 5,
+    borderRadius: 20,
+    padding: 6,
     boxShadow: 'rgba(0, 0, 0, 0.1) 0px 2px 6px'
   }
 })

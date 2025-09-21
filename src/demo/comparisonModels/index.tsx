@@ -140,7 +140,6 @@ const ComparisonModel = () => {
     <Animated.View
       style={[
         {
-          backgroundColor: "red",
           display: showButton ? 'flex' : 'none',
           opacity: fadeAnim,
           transform: [

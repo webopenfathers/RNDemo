@@ -15,6 +15,8 @@ const ComparisonModel = () => {
   const [showButton, setShowButton] = useState(false);
   const scrollHorizonRef = useRef<ScrollView>(null)
   const scrollVerticalRef = useRef<ScrollView>(null)
+  // 阻止 执行淡出动画 只执行一次
+  const isFlag = useRef(false)
   const scrollModalRef = useRef<ScrollView>(null)
   const fadeAnim = useRef(new Animated.Value(0)).current; // 用于淡入淡出动画
   // 大盒子top定位
@@ -55,6 +57,7 @@ const ComparisonModel = () => {
     // 滚动超过屏幕高度的 60% 时出现
     const scrollThreshold = windowHeight * 0.6;
     if (offsetY > scrollThreshold && !showButton) {
+      isFlag.current = true
       setShowButton(true);
       // 执行淡入动画
       Animated.timing(fadeAnim, {
@@ -64,11 +67,16 @@ const ComparisonModel = () => {
       }).start();
     } else if (offsetY <= scrollThreshold && showButton) {
       // 执行淡出动画，动画结束后隐藏按钮
-      Animated.timing(fadeAnim, {
-        toValue: 0,
-        duration: 500,
-        useNativeDriver: true,
-      }).start(() => setShowButton(false));
+      if (isFlag.current) {
+        isFlag.current = false
+        Animated.timing(fadeAnim, {
+          toValue: 0,
+          duration: 300,
+          useNativeDriver: true,
+        }).start(() => setShowButton(false));
+      } else {
+        isFlag.current = false
+      }
     }
   }
 

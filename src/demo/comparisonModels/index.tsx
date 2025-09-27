@@ -145,10 +145,9 @@ const ComparisonModel = () => {
       <FixedContent initBoxPos={initBoxPos} detailParamPos={detailParamPos} detailList={detailList} />
     </Animated.ScrollView>
     {/* 按钮 淡入淡出动画 和 平移动画 */}
-    <Animated.View
+    {showButton && <Animated.View
       style={[
         {
-          display: showButton ? 'flex' : 'none',
           opacity: fadeAnim,
           transform: [
             {
@@ -164,7 +163,7 @@ const ComparisonModel = () => {
       <Pressable onPress={scrollToTop}>
         <GoTop />
       </Pressable>
-    </Animated.View>
+    </Animated.View>}
   </View>
 }
 

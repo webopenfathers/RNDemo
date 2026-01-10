@@ -1,8 +1,10 @@
 import { View, Text, StyleSheet } from 'react-native';
 
+import { getStyle } from '../utils';
+const commonStyle = getStyle()
+
 
 const FixedContent = (props: any) => {
-
   return <View style={[styles.root, { top: props.initBoxPos }]}>
     {/*  参数对比 只看不同 核心参数*/}
 
@@ -38,7 +40,7 @@ const styles = StyleSheet.create({
   sty1: {
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingHorizontal: 20,
+    paddingHorizontal: commonStyle.Space,
   },
   text1: {
     fontSize: 16,
@@ -49,13 +51,13 @@ const styles = StyleSheet.create({
   },
   text3: {
     fontSize: 14,
-    paddingHorizontal: 20,
+    paddingHorizontal: commonStyle.Space,
     paddingTop: 30,
     paddingBottom: 10,
   },
   txt: {
     fontSize: 14,
-    paddingHorizontal: 20,
+    paddingHorizontal: commonStyle.Space,
     paddingTop: 40,
     paddingBottom: 10,
     color: '#000',
@@ -64,7 +66,7 @@ const styles = StyleSheet.create({
   line: {
     borderBottomWidth: 0.5,
     borderBottomColor: "#ccc",
-    marginHorizontal: 16
+    marginHorizontal: commonStyle.Space
   }
 })
 

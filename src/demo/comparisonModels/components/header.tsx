@@ -1,4 +1,11 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Pressable } from 'react-native';
+import ModelSelection from './modelSelection';
+import { useRef } from 'react';
+
+import { getStyle } from '../utils'
+
+const commonStyle = getStyle()
+
 
 const mobileList = [
   {
@@ -22,14 +29,18 @@ const mobileList = [
 ]
 
 const Header = () => {
+  const modelRef = useRef<typeof ModelSelection | null>(null)
+
   return <View style={styles.content}>
     {
       mobileList.map((item, index) => (
-        <View key={index} style={styles.itemContent}>
+        // @ts-ignore
+        <Pressable key={index} style={styles.itemContent} onPress={() => modelRef?.current?.showModal()}>
           <Text numberOfLines={2} ellipsizeMode="tail" style={styles.itemTxt}>{item.name}</Text>
-        </View>
+        </Pressable>
       ))
     }
+    <ModelSelection ref={modelRef} />
   </View>
 }
 
@@ -41,15 +52,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     height: 48,
-    marginRight: 20,
-    borderWidth: 1,
+    marginRight: commonStyle.Space,
+    borderWidth: commonStyle.border,
     borderRadius: 8,
-    width: 155,
-    paddingHorizontal: 10,
+    width: commonStyle.header.width,
     borderColor: "rgba(0, 0, 0, 0.1)"
   },
   itemTxt: {
-    fontSize: 12
+    fontSize: 12,
+    paddingHorizontal: 12
   }
 })
 

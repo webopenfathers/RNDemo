@@ -1,6 +1,8 @@
-import { View, StyleSheet, Image, FlatList, Text } from 'react-native'
+import { View, StyleSheet, FlatList, Text } from 'react-native'
 import { useRef } from 'react';
 import { specificationList } from '../constants/disPrdSet'
+import { getStyle } from '../utils';
+const commonStyle = getStyle()
 
 
 
@@ -12,7 +14,7 @@ const DetailParam = (props: any) => {
   }
 
   const renderItem = ({ item, index }: { item: any, index: number }) => {
-    return <View style={{ paddingLeft: 20, flexDirection: "column" }} onLayout={(event: any) => {
+    return <View style={{ flexDirection: "column" }} onLayout={(event: any) => {
       item.height = event.nativeEvent.layout.height
       setList(item)
     }}>
@@ -22,7 +24,7 @@ const DetailParam = (props: any) => {
           <View key={i} style={{ flexDirection: "row" }}>
             {
               ele.map((k: any, j: number) => (
-                <View key={`${i}-${j}`} style={{ width: 155, marginRight: 20, paddingBottom: 30 }}>
+                <View key={`${i}-${j}`} style={{ width: commonStyle.params.width, marginRight: commonStyle.Space, paddingBottom: 30 }}>
                   <Text style={styles.nameStyle}>{k.name}</Text>
                   <Text>{k.value}</Text>
                 </View>
@@ -45,18 +47,6 @@ const DetailParam = (props: any) => {
 export default DetailParam
 
 const styles = StyleSheet.create({
-  textStyle: {
-    position: "absolute",
-    marginBottom: 4,
-    color: "#000",
-    fontSize: 14,
-    fontWeight: "bold",
-    lineHeight: 16,
-    borderBottomWidth: 0.5,
-    paddingBottom: 10,
-    marginRight: 10,
-    borderBottomColor: "#ccc"
-  },
   box: {
     position: "absolute"
   },

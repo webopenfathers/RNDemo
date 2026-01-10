@@ -1,5 +1,7 @@
 import { View, StyleSheet, Image, Text } from 'react-native'
 import disPrdSet from '../constants/disPrdSet.js'
+import { getStyle } from '../utils';
+const commonStyle = getStyle()
 
 
 // 实现逻辑---处理数据
@@ -66,7 +68,6 @@ const styles = StyleSheet.create({
   root: {
     flexDirection: "column",
     flex: 1,
-    paddingLeft: 20,
     paddingTop: 80,
   },
   itemWidth: {
@@ -74,8 +75,8 @@ const styles = StyleSheet.create({
     paddingVertical: 15
   },
   listStyle: {
-    marginRight: 20,
-    width: 155
+    marginRight: commonStyle.Space,
+    width: commonStyle.params.width
   },
   textStyle: {
     marginBottom: 4,

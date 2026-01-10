@@ -81,7 +81,8 @@ import {
 
 // import RefDemo4 from './src/ref/RefDemo4'
 
-import ComparisonModel from './src/demo/comparisonModels'
+// import ComparisonModel from './src/demo/comparisonModels'
+import SlideAnimationTab from './src/demo/slideAnimationTab/index';
 
 
 function App() {
@@ -140,7 +141,8 @@ function App() {
         {/* <RefDemo2 /> */}
         {/* <RefDemo3 /> */}
         {/* <RefDemo4 /> */}
-        <ComparisonModel />
+        {/* <ComparisonModel /> */}
+        <SlideAnimationTab />
       </View>
     </SafeAreaView>
   );

@@ -4,7 +4,6 @@ import { Text, TextInput, View, Keyboard, Animated } from "react-native"
 const Counter = () => {
   const [isLongPress, setIsLongPress] = useState(false);
   const timeout = useRef<any>(null);
-  const [a, setA] = useState(0);
   const viewHeight = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
@@ -55,7 +54,7 @@ const Counter = () => {
     setIsLongPress(false);
   }
 
-  return <View>
+  return <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: '100%' }}>
     <TextInput
       onFocus={handleFocus}
       onPressIn={handlePressIn}
@@ -72,7 +71,7 @@ const Counter = () => {
     />
     {isLongPress && <Text>张博闻</Text>}
     {/* Animated动画和interpolate插值动画 */}
-    <Animated.View style={{ height: viewHeight, backgroundColor: bgc }} />
+    <Animated.View style={{ height: viewHeight, backgroundColor: bgc, width: '100%' }} />
   </View>
 }
 

@@ -83,7 +83,8 @@ import {
 
 // import ComparisonModel from './src/demo/comparisonModels'
 // import SlideAnimationTab from './src/demo/slideAnimationTab/index';
-import Counter from './src/demo/shoppingCartCounter/index';
+// import Counter from './src/demo/shoppingCartCounter/index';
+import ScrollViewList from './src/demo/scrollviewList/index';
 
 
 function App() {
@@ -144,7 +145,8 @@ function App() {
         {/* <RefDemo4 /> */}
         {/* <ComparisonModel /> */}
         {/* <SlideAnimationTab /> */}
-        <Counter />
+        {/* <Counter /> */}
+        <ScrollViewList />
       </View>
     </SafeAreaView>
   );
